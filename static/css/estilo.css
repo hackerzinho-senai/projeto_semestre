@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+header, footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(49, 48, 48);
+    display: flex;
+    gap: 10vw
+}
+.container {
+    width: 100vw;
+    min-height: 80vh; 
+    padding-top: 10vh;
+    background-color: rgb(39, 57, 143);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    gap: 5vh
+}
+table, thead, tbody{
+    width: 80%;
+}
+tr,li{
+    width: 100%;
+    min-height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+th, td{
+    min-width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+
+.logo{
+    width: 20vw;
+    height: 10vh;
+}
+.btnacesso{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+ul{
+    list-style: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 1vh;
+}
+form>p{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    justify-content: center;
+}
+
+
+.direito{
+    display:flex;
+    align-items: flex-end;
+}
+.esquerda{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+/* Botoes */
+
+.btn{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.btn:hover{ 
+    text-decoration: none;
+    background-color: rgb(39, 42, 218);
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Botão de excluir. Não sei se é só para ele */
+.btnv{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btnv:hover{ 
+background-color: red
+}
+
+
+
+
+
+
+/*Botoes de acesso*/
+.btni {
+    text-decoration: none;
+    background-color: rgb(39, 57, 143);
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.btni:hover {
+    background-color: rgb(39, 57, 143);
+    transform: translateY(-2px); 
+
+}
+
+.btnii{
+    text-decoration: none;
+    background-color: rgb(39, 57, 143);
+    color: white;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+
+}
+
+.btnii:hover {
+    background-color: rgb(39, 57, 143);
+    transform: translateY(-2px); 
+
+}
+
+.btnn{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 2px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.btnn:hover{ 
+    text-decoration: none;
+    background-color: rgb(39, 42, 218);
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media screen and (max-width: 900px) {
+    header, footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh; /* Reduz o espaçamento */
+        height: auto; /* Permite que a altura se ajuste */
+    }
+    
+    .container {
+        padding: 5vh 2vw; /* Adiciona um espaçamento interno proporcional */
+    }
+    
+    table, thead, tbody {
+        width: 100%; /* Deixa a tabela ocupar toda a largura disponível */
+    }
+    
+    th, td {
+        min-width: auto; /* Remove o mínimo para ajustar ao tamanho */
+        font-size: 14px; /* Ajusta o tamanho do texto para telas menores */
+    }
+    
+    tr, li {
+        flex-direction: column; /* Empilha os itens */
+        align-items: flex-start; /* Alinha à esquerda */
+        border-bottom: none; /* Remove a borda para evitar excesso de linhas */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Reduz o tamanho dos botões */
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 50%; /* Ajusta a largura da logo */
+        height: auto; /* Mantém proporção */
+    }
+
+    .btnacesso {
+        flex-direction: column; /* Reorganiza os botões verticalmente */
+        align-items: center;
+    }
+    
+    form {
+        width: 90%; /* Reduz a largura do formulário */
+        gap: 2vh; /* Ajusta o espaçamento */
+    }
+
+    ul {
+        padding: 0 5%; /* Adiciona margens para centralizar o conteúdo */
+    }
+
+    .direito, .esquerda {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+    }
+}
+

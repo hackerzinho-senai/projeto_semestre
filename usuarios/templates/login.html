@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
-    <h2>Login</h2>
-    <form method="post" action="{% url 'login' %}">
-            
-        {% csrf_token%}
-        {{ form.as_p }}
-        <button type="submit">Entrar</button>
-        
-    </form>
+    <div class="lateral">
+        <img class="l" src="{% static 'img/login.jpg' %}" alt="Imagem de login">
+    </div>
 
-    {% if form.erros %}
-        <p>Usuaário e senha inválidos"</p>
-    {% endif %}
+    <div class="container">
+        <div class="loi">
+        <h2>Login</h2>
 
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Entrar</button>
+        </form>
+
+        {% if form.errors %}
+            <p class="erro">Usuário e senha inválidos</p>
+        {% endif %}
+    </div>
+    </div>
 </body>
 </html>

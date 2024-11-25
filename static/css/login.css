@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 3fr 9fr; /* Largura das colunas */
+    grid-template-rows: 100vh; /* Altura de 100% da altura da tela */
+    grid-template-areas: "l c"; /* "l" para a lateral e "c" para o conteúdo */
+    height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    overflow: hidden;
+}
+
+.lateral {
+    grid-area: l;
+    min-height: 100vh; /* A altura da lateral será 100vh */
+    background-color: rgba(255, 255, 255, 0); /* Cor de fundo */
+    position: relative; /* Para ajustar a imagem de forma absoluta */
+}
+
+.lateral img {
+    width: 100%; /* A imagem vai ocupar toda a largura da coluna */
+    height: 100%; /* A imagem vai ocupar toda a altura da coluna */
+    object-fit: cover; /* A imagem vai cobrir toda a área sem distorcer */
+    position: absolute; /* Garantir que a imagem ocupe toda a área */
+    top: 0;
+    left: 0;
+}
+
+.container {
+    grid-area: c;
+    background-color: rgb(58, 57, 57);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    padding: 20px; /* Adiciona um pequeno espaçamento */
+    min-height: 100vh; /* Garantir que ocupe toda a altura disponível */
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Define uma largura máxima para o formulário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    font-size: 2.1rem;
+}
+
+form p {
+    width: 100%;
+    color: white;
+}
+
+button {
+    background-color: rgb(212, 212, 231);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 300px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(90, 90, 92);
+}
+
+.loi{
+    background-color: black;
+    padding: 5vh 6vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    border-radius: 20px;
+    border: 10px solid rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 1200px) {
+    
+    body{
+        grid-template-areas:"c c";
+    }
+    .container {
+        grid-area: c;
+        background-color: rgb(58, 57, 57);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5vh;
+        padding: 20px; /* Adiciona um pequeno espaçamento */
+        min-height: 100vh; /* Garantir que ocupe toda a altura disponível */
+    }
+    
+    h2 {
+        font-size: 2; /* Tamanho do título */
+        margin-bottom: 20px; /* Espaçamento abaixo do título */
+    }
+    
+    form {
+        width: 100%;
+        max-width: 400px; /* Define uma largura máxima para o formulário */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        font-size: 1rem;
+    }
+}

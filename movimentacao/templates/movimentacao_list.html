@@ -9,8 +9,8 @@
         <li>
             {{ movimentacao.produto.nome }} - {{ movimentacao.quantidade }} unidades em {{ movimentacao.data }} -
             Total: R$ {{ movimentacao.valor_total }}
-            <a href="{% url 'movimentacao_update' movimentacao.pk %}">Editar</a>
-            <a href="{% url 'movimentacao_delete' movimentacao.pk %}">Excluir</a>
+             <a class="btn"href="{% url 'movimentacao_update' movimentacao.pk %}">Editar</a>
+             <a class="btnv" href="{% url 'movimentacao_delete' movimentacao.pk %}">Excluir</a>
         </li>
     {% empty %}
         <li>Sem movimentações cadastradas.</li>

@@ -10,11 +10,18 @@
 <body>
     <header>
         <div class="btnacesso"> 
+            <img class="logo" src="{% static 'img/logo.png' %}" alt="">
+            <div class="esquerda"> 
             <a class="btni" href="{% url 'homepage' %}">Home</a>
             <a class="btni" href="{% url 'produto_list' %}">Produtos</a>
             <a class="btni" href="{% url 'categoria_list' %}">Categorias</a>
             <a class="btni" href="{% url 'movimentacao_list' %}">Movimentacao</a>
-            <a class="btn" href="{% url 'profile' %}">Perfil</a>
+
+
+            <div class="direita">
+            {% comment %} Alterar {% endcomment %}
+            <a class="btnii" href="{% url 'profile' %}">Perfil</a> 
+            </div>
         </div>
     </header>
     <div class="container">
