@@ -181,9 +181,10 @@ form>p{
         padding: 0 5%; /* Adiciona margens para centralizar o conteúdo */
     }
 
-    .direito, .esquerda {
-        flex-direction: column;
-        align-items: center; /* Centraliza os itens */
+    .esquerda {
+        overflow: scroll;
+        max-width: 90vw;
+        background-color: rgb(49, 48, 48);
     }
 }
 @media screen and (max-width: 600px) {
@@ -217,5 +218,10 @@ form>p{
     .btnacesso {
         flex-direction: column;
         align-items: center;
+    }
+    .esquerda {
+        overflow: scroll;
+        max-width: 100vw;
+        background-color: rgb(49, 48, 48);
     }
 }
