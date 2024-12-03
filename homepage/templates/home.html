@@ -4,14 +4,14 @@
 
 
 <div class="table-container">
-    <h1>Bem-vindo {{ user.first_name }} {{ user.last_name }}!</h1>
+    <h1>Bem-vindo!</h1>
     <br>
-    <h2>Últimos 10 Produtos e Saldo de Estoque</h2>
+    <h2>Últimos 10 Produtos e Quantidade de Estoque</h2>
 <table>
-    <tr>
+    <tr class='titab'>
         <th>Produto</th>
         <th>Preço</th>
-        <th>Saldo em Estoque</th>
+        <th>Quantidade em Estoque</th>
     </tr>
     <br>
     {% for produto in produtos %}

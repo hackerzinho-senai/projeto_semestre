@@ -1,49 +1,63 @@
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 header, footer {
     width: 100vw;
     height: 10vh;
     background-color: rgb(49, 48, 48);
+    gap: 10vw;
     display: flex;
-    gap: 10vw
 }
+
 .container {
-    width: 100vw;
-    min-height: 80vh; 
-    padding-top: 10vh;
-    background-color: rgb(39, 57, 143);
+    width: 100%;
+    min-height: 80vh;
+    padding-top: 5vh;
+    background-color: #27398f;
     display: flex;
     flex-direction: column;
-    color: rgb(255, 255, 255);
+    color: #fff;
     align-items: center;
-    gap: 5vh
+    gap: 3vh;
+    padding: 5vh 10vw;
 }
-table, thead, tbody{
-    width: 80%;
-}
-tr,li{
+table {
     width: 100%;
-    min-height: 6vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
-th, td{
-    min-width: 10vw;
-    display: flex;
-    align-items: center;
-    justify-self: center;
+    border-collapse: collapse; /* Faz com que duas bordas se juntem */
+    margin-top: 2vh;
 }
 
-
-.logo{
-    width: 20vw;
-    height: 10vh;
+thead th {
+    background-color: #000;
+    color: #fff;
+    padding: 1vh 1.5vw;
+    text-align: left;
 }
+th{
+    background-color: black;
+}
+tbody td, tbody th {
+    padding: 1vh 1.5vw;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+tr:hover { /*Qunado passar o mouse em cima a linha ira ficar minimamente mais escura*/
+    background-color: rgb(000, 000, 000, 0.2);
+}
+
+th, td {
+    font-size: 16px;
+}
+
+.logo {
+    width: 15vw;
+    max-width: 200px;
+    height: auto;
+}
+
 .btnacesso{
     height: 100%;
     display: flex;
@@ -56,7 +70,7 @@ ul{
 form{
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     gap: 1vh;
 }
 form>p{
@@ -81,142 +95,62 @@ form>p{
 
 /* Botoes */
 
-.btn{
+.btn, .btnv, .btnn, .btni, .btnii {
     text-decoration: none;
     background-color: rgb(0, 0, 0);
     color: white;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
-    margin: 5px; 
-    transition: background-color 0.3s, transform 0.2s; 
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: inline-block;
 }
 
-.btn:hover{ 
-    text-decoration: none;
+.btn:hover, .btnn:hover, .btnv:hover {
     background-color: rgb(39, 42, 218);
     color: white;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 5px; 
-    transition: background-color 0.3s, transform 0.2s; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-/* Botão de excluir. Não sei se é só para ele */
-.btnv{
-    text-decoration: none;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 5px; 
-    transition: background-color 0.3s, transform 0.2s; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.btnv:hover{ 
-background-color: red
+.btnv:hover {
+    background-color: red;
 }
 
-
-
-
-
-
-/*Botoes de acesso*/
-.btni {
-    text-decoration: none;
+.btni:hover, .btnii:hover {
     background-color: rgb(39, 57, 143);
-    color: white;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 5px; 
-    transition: background-color 0.3s, transform 0.2s; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
+    transform: translateY(-2px);
 }
 
-.btni:hover {
-    background-color: rgb(39, 57, 143);
-    transform: translateY(-2px); 
-
-}
-
-.btnii{
-    text-decoration: none;
-    background-color: rgb(39, 57, 143);
-    color: white;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 5px; 
-    transition: background-color 0.3s, transform 0.2s; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-flex;
-
-}
-
-.btnii:hover {
-    background-color: rgb(39, 57, 143);
-    transform: translateY(-2px); 
-
-}
-
-.btnn{
-    text-decoration: none;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 5px 10px; 
-    border-radius: 5px;
+.btnn {
     font-size: 15px;
-    margin: 2px; 
-    transition: background-color 0.3s, transform 0.2s; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
+    padding: 5px 10px;
 }
-
-.btnn:hover{ 
-    text-decoration: none;
-    background-color: rgb(39, 42, 218);
-    color: white;
-    padding: 5px 10px; 
-    border-radius: 5px;
-    font-size: 15px;
-    margin: 5px; 
-    transition: background-color 0.3s, transform 0.2s; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 
 @media screen and (max-width: 900px) {
     header, footer {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
         gap: 2vh; /* Reduz o espaçamento */
         height: auto; /* Permite que a altura se ajuste */
+        flex-direction: column;
+        padding: 2vh 5vw;
+        align-items: center;
     }
-    
+
     .container {
         padding: 5vh 2vw; /* Adiciona um espaçamento interno proporcional */
     }
-    
+
     table, thead, tbody {
         width: 100%; /* Deixa a tabela ocupar toda a largura disponível */
     }
-    
+
     th, td {
         min-width: auto; /* Remove o mínimo para ajustar ao tamanho */
         font-size: 14px; /* Ajusta o tamanho do texto para telas menores */
     }
-    
+
     tr, li {
         flex-direction: column; /* Empilha os itens */
         align-items: flex-start; /* Alinha à esquerda */
@@ -229,7 +163,7 @@ background-color: red
     }
 
     .logo {
-        width: 50%; /* Ajusta a largura da logo */
+        width: 35%; /* Ajusta a largura da logo */
         height: auto; /* Mantém proporção */
     }
 
@@ -237,7 +171,7 @@ background-color: red
         flex-direction: column; /* Reorganiza os botões verticalmente */
         align-items: center;
     }
-    
+
     form {
         width: 90%; /* Reduz a largura do formulário */
         gap: 2vh; /* Ajusta o espaçamento */
@@ -252,4 +186,36 @@ background-color: red
         align-items: center; /* Centraliza os itens */
     }
 }
+@media screen and (max-width: 600px) {
+    header, footer {
+        padding: 1rem 2vw;
+    }
 
+    .container {
+        padding: 2vh 4vw;
+    }
+
+    th, td {
+        padding: 1vh 1vw;
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .logo {
+        width: 0%;
+    }
+
+    form {
+        width: 95%;
+        gap: 2vh;
+    }
+
+    .btnacesso {
+        flex-direction: column;
+        align-items: center;
+    }
+}
